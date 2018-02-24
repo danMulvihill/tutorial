@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/tutorial2.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">return to index</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Version Control (using Git)</h1>
+            <p>Git is the most popular version control system. It works by storing
+                repositories of your projects. The repositories contain hidden files
+                for recovering previous versions of projects and alternative branches that
+                can be restored if necessary. There is GUI version, but it is most often used on
+                the command line interface (CLI). There are really very few commands and techniques
+                that are used most of the time. Master these commands and look up the rest.
+            </p>
+        </header>
+        <div class="main-content">
+            <div class="row">
+                    <div class="col col-3-3">
+                        <h3>Inquiry commands: commands that provide information or guidence</h3>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>status</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>Checks the status of files and direcotories before they are commited.</p>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>log</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>The log command outputs a log of all the version that you committed.</p>
+                    </section>
+                </div>
+                <div class="row">
+                        <div class="col col-1-3">
+                            <h2>diff</h2>
+                        </div>
+                        <section class="col col-2-3">
+                            <p>The diff comand is one you probably use less often then status and log, but it's
+                                a convenient little command for comparing the differences between two versions.</p>
+                        </section>
+                    </div>
+
+                <div class="row"><div class="col col-3-3"><h3>Effect commands: commands that make a change</h3></div></div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>init</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>Used to initialize a brand new respository. 
+                        </p>
+                    </section>
+                    </div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>add</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>Used to add files and directories to the "staging area". Can specify the file to add, or use the "--all"(or -A) flag</p>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>commit</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>Used to commit files, along with a "message" using the -m flag. Can also use the -a flag 
+                            when updating existing files. allowing you to bypass the add command.</p>
+                    </section>
+                </div>
+                <div class="row">
+                        <div class="col col-1-3">
+                            <h2>reset</h2>
+                        </div>
+                        <section class="col col-2-3">
+                            <p>Reset is the "oops" command. This is the command that allows you to go back to a previous 
+                                version.
+                            </p>
+                        </section>
+                    </div>
+
+                <div class="row"><div class="col col-3-3"><h3>remote commands: for communicating with a remote GitHub respository</h3></div></div>
+                
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>remote</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>The remote command, when used alone, will provide the remote respository, but the remote
+                            command is also used to define a remote respository on GitHub. You usually will not have to remember
+                            the flags and parameters, because you can conveniently copy and paste from GitHub.
+                        </p>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>push</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>The push command is used to "push" a local respository onto a GitHub respository once a remote
+                            connection is set. 
+                        </p>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>clone</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>The clone command is used to copy a respository from someone else's GitHub respository to 
+                            your local respository.
+                        </p>
+                    </section>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
