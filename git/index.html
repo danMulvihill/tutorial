@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/tutorial2.css">
+    <title>Version Control (with git) | Tools for Web Development</title>
+    <link rel="stylesheet" href="../_css/tutorial2.css">
 </head>
 <body>
     <nav class="top-nav">
         <ul>
-            <li><a href="index.html">return to index</a></li>
+            <li><a href="../">return to index</a></li>
         </ul>
     </nav>
     <div class="container">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="row">
                     <div class="col col-1-3">
-                        <h2>status</h2>
+                        <h2>git status</h2>
                     </div>
                     <section class="col col-2-3">
                         <p>Checks the status of files and direcotories before they are commited.</p>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="row">
                     <div class="col col-1-3">
-                        <h2>log</h2>
+                        <h2>git log</h2>
                     </div>
                     <section class="col col-2-3">
                         <p>The log command outputs a log of all the version that you committed.</p>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="row">
                         <div class="col col-1-3">
-                            <h2>diff</h2>
+                            <h2>git diff</h2>
                         </div>
                         <section class="col col-2-3">
                             <p>The diff comand is one you probably use less often then status and log, but it's
@@ -60,16 +60,16 @@
                 <div class="row"><div class="col col-3-3"><h3>Effect commands: commands that make a change</h3></div></div>
                 <div class="row">
                     <div class="col col-1-3">
-                        <h2>init</h2>
+                        <h2>git init</h2>
                     </div>
                     <section class="col col-2-3">
-                        <p>Used to initialize a brand new respository. 
+                        <p>Used to initialize a brand new repository. 
                         </p>
                     </section>
                     </div>
                 <div class="row">
                     <div class="col col-1-3">
-                        <h2>add</h2>
+                        <h2>git add</h2>
                     </div>
                     <section class="col col-2-3">
                         <p>Used to add files and directories to the "staging area". Can specify the file to add, or use the "--all"(or -A) flag</p>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="row">
                     <div class="col col-1-3">
-                        <h2>commit</h2>
+                        <h2>git commit</h2>
                     </div>
                     <section class="col col-2-3">
                         <p>Used to commit files, along with a "message" using the -m flag. Can also use the -a flag 
@@ -86,7 +86,7 @@
                 </div>
                 <div class="row">
                         <div class="col col-1-3">
-                            <h2>reset</h2>
+                            <h2>git reset</h2>
                         </div>
                         <section class="col col-2-3">
                             <p>Reset is the "oops" command. This is the command that allows you to go back to a previous 
@@ -95,40 +95,95 @@
                         </section>
                     </div>
 
-                <div class="row"><div class="col col-3-3"><h3>remote commands: for communicating with a remote GitHub respository</h3></div></div>
+                <div class="row"><div class="col col-3-3"><h3>remote commands: for communicating with a remote GitHub repository</h3></div></div>
                 
                 <div class="row">
                     <div class="col col-1-3">
-                        <h2>remote</h2>
+                        <h2>git remote</h2>
                     </div>
                     <section class="col col-2-3">
-                        <p>The remote command, when used alone, will provide the remote respository, but the remote
-                            command is also used to define a remote respository on GitHub. You usually will not have to remember
-                            the flags and parameters, because you can conveniently copy and paste from GitHub.
+                        <p>The remote command, when used alone, will display the remote repository, but the remote
+                            command is also used to define a remote repository on GitHub the first time you put a local repository up on GitHub. 
+                            You usually will not have to remember the flags and parameters, because you can conveniently copy and paste from GitHub.
                         </p>
                     </section>
                 </div>
                 <div class="row">
                     <div class="col col-1-3">
-                        <h2>push</h2>
+                        <h2>git push</h2>
                     </div>
                     <section class="col col-2-3">
-                        <p>The push command is used to "push" a local respository onto a GitHub respository once a remote
+                        <p>The push command is used to "push" a local repository onto a GitHub repository once a remote
                             connection is set. 
                         </p>
                     </section>
                 </div>
                 <div class="row">
+                        <div class="col col-1-3">
+                            <h2>git pull</h2>
+                        </div>
+                        <section class="col col-2-3">
+                            <p>The pull command is used to "pull" a remote repository from a GitHub repository. 
+                               This command is usually used when working on projects in collaboration with other developers.
+                               In most cases, you would be pulling a remote branch onto a local branch. 
+                            </p>
+                        </section>
+                    </div>
+                <div class="row">
                     <div class="col col-1-3">
-                        <h2>clone</h2>
+                        <h2>git clone</h2>
                     </div>
                     <section class="col col-2-3">
-                        <p>The clone command is used to copy a respository from someone else's GitHub respository to 
-                            your local respository.
+                        <p>The clone command is used to copy a repository from someone else's GitHub repository to 
+                            your local repository.
                         </p>
                     </section>
                 </div>
+
+                <div class="row"><div class="col col-3-3"><h3>branching commands: common commands for merging branches</h3></div></div>
+                
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>git branch</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>Use the branch command when you are working with a team, or yourself, and need to branch off from the 
+                            rest of the group to work on a specific part with interference from others. 
+                            Use the branch command followed by a name you want to call your branch.
+                            The branch command by itself displays all the branches created.
+                            Use the -d flag to delete a branch.
+                        </p>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>git checkout</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>The checkout command moves you from one branch to another. Type the name of the branch
+                            you wish to move to after checkout. You can create a new branch with checkout too, 
+                            by adding the -b flag, allowing you to bypass the branch command.
+                        </p>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col col-1-3">
+                        <h2>git merge</h2>
+                    </div>
+                    <section class="col col-2-3">
+                        <p>When you are ready to merge two branches back together, 
+                            first navigate to the branch you want to keep, usually the master branch,
+                            and then use the merge command followed by the branch to merge into master.
+                            This part can also be done within GitHub with a pull request.
+                        </p>
+                    </section>
+                </div>
+                <div class="row">
+                    <section class="col col-3-3 js-top">return to top</section>
+                </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../_js/main.js"></script>
 </body>
 </html>

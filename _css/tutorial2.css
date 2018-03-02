@@ -1,4 +1,4 @@
- /* Some universal systems */
+ /* Some universal settings */
  
  body{
     line-height: 1.3;
@@ -31,6 +31,9 @@ h3{
     color:white;
     opacity: .7;
 }
+/* .index .top-nav{
+    display:none;
+} */
 
 .top-nav ul{
     margin: 0 auto;
@@ -71,14 +74,31 @@ header p{
     padding-bottom: 8px;
 }
 
+header a{
+    color: cyan;
+}
+
+.divided-header h1{
+    float:left;
+    width:60%;
+}
+
+.divided-header h4{
+    float:right;
+    width:30%;
+}
+.divided-header p{
+    clear:both;
+}
+
 .row{
     clear: both;
     overflow: auto;
-    border: 1px solid brown;
+    border: 1px solid #334;
 }
 .row>.col-3-3{
-    color: white;
-    background: brown;
+    color: lavender;
+    background: #556;
 }
 
 section{
@@ -108,7 +128,17 @@ section{
    
 }
 
-@media all and (min-width: 500px){
+.js-top{
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.wide{
+    display:none;
+}
+
+@media all and (min-width: 600px){
     .container{
         background: #334;
         padding: 8px;
@@ -118,7 +148,14 @@ section{
     header{
         padding: 0 15px;
     }
+
+    .wide{
+        display:inline;
+    }
    
+    .index .top-nav{
+        display:block;
+    }
     .row{
         border: none;
         margin-top: 10px;
@@ -142,6 +179,7 @@ section{
 
     .index .col-1-3{
         float:none;
+        
     }
 
     .col-2-3{
@@ -154,6 +192,7 @@ section{
 
     .index .col-2-3{
         float:none;
+        width: 68%;
     }
     
     index .col-3-3{
