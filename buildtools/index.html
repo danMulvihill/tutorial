@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Build Tools | Tools for Web development</title>
+    <title>Node Automation Modules | Tools for Web development</title>
     <link rel="stylesheet" href="../_css/tutorial2.css">
 </head>
 <body>
@@ -15,10 +15,13 @@
     </nav> 
     <div class="container">
         <header>
-            <h1>Build Tools (via Node)</h1>
+            <h1>Node Automation Modules</h1>
             <p> Node is an environment built for using JavaScript on a computer's OS instead of within the browser.
                 Most people think of it as JavaScript's server-side enviroment, but it's more than that. 
                 Node comes equiped with a huge variety of command-line tools to help with front-end development. 
+                There are automation modules in other programming language environements. <a href="https://getcomposer.org">Composer</a> is a package manager
+                for PHP, for example, and Ruby has a healthy ecosystem of programs, but nobody comes close to NodeJS for 
+                the amount of programs available.
             </p>
         </header>
         <div class="main-content">
@@ -27,12 +30,19 @@
                     <h2>Package Management</h2>
                 </div>
                 <section class="col col-2-3">
-                    <p>When you download Node on to your computer, it comes with tool called 
-                        Node Package Management or npm, although you can also install other package managers. 
-                        One popular alternative is yarn. 
+                    <p>When you download <a href="https://nodejs.org/en/">Node</a> on to your computer, it comes with tool called 
+                        Node Package Management or <a href="https://www.npmjs.com">npm</a>, although you can also install other package managers. 
+                        One popular alternative is <a href="https://yarnpkg.com/en/">yarn</a>. Many people prefer yarn because it's better 
+                        code orgainzation allows for faster or more efficient processing. 
+                        <a href="https://bower.io">Bower</a> is another older package manager. 
                         npm, yarn, and other package managers work with a package.json file,
                         that acts as a kind of manifest of all the packages, or modules, and uses that manifest
-                        to store and organized the modules in a directory.</p>
+                        to store and organized the modules in a directory. To start using npm,
+                       find the package, or module, you want and install it on the command line with the
+                       command <code>npm install [module-name]</code>. When you do this, it's creates a directory named modules, and puts all your modules in that directory, 
+                       along with any dependencies included. You can, for example install <a href="https://www.npmjs.com/package/jquery">jquery</a> with <code>npm install jquery</code>. 
+                       Use the <code>npm init</code> command to create a package.json file.
+                       There are two useful flags that saves it the package.json file, <code>--save</code> and <code>--save-dev</code>  </p>
                 </section>
             </div>
             <div class="row">
@@ -40,16 +50,15 @@
                     <h2>Task Runners</h2>
                 </div>
                 <section class="col col-2-3">
-                    <p>Grunt, gulp</p>
-                </section>
-            </div>
-
-            <div class="row">
-                <div class="col col-1-3">
-                    <h2>Development Servers</h2>
-                </div>
-                <section class="col col-2-3">
-                    <p>live-server, browser-sync?</p>
+                    <p>Task runners help automate the development workflow by doing many 
+                        reptitive and tedious tasks for you. For example, instead of cutting your css or javascript code
+                        to paste into a minimizer, the tasker runner will do this with one command. 
+                        You can add and combine tasks like browser refreshing and linting too.
+                        <a href="https://www.npmjs.com/package/gulp">Gulp</a> and <a href="https://www.npmjs.com/package/grunt">Grunt</a> are the two most popular packages that are competing for most popular, 
+                        although Gulp, the newer of two, seems to be gaining the upper hand.
+                        Using Gulp can be a simple as calling a few methods in a single file, 
+                        or it can be complex with multiple files that incorpate other packages like WebPack and development servers.
+                        If you want easy, download or clone <a href="https://github.com/gulpjs/gulp/blob/v3.9.1/docs/getting-started.md">Gulp from GitHub</a> and follow the easy-to-use documentation provide there.</p>
                 </section>
             </div>
             <div class="row">
@@ -57,16 +66,44 @@
                         <h2>Bundling</h2>
                     </div>
                     <section class="col col-2-3">
-                        <p>Webpack</p>
+                        <p>CSS and JavaScript files are linked to HMTL pages with the standard link and script tags. You can provide more than
+                            one script or link tag, but it is much more efficient and faster to bundle them all in one tag.
+                            Bundling packages take all your scripts and put them into a single file.   By far the most well-loved package manager right now is <a href="https://www.npmjs.com/package/webpack">WebPack</a>. 
+                            WebPack will also help with running preprocessors and transpilers, and even some of the tasks handled by Gulp.
+                            <a href="https://www.npmjs.com/package/browserify">Browserify</a> is another older bundler, but it's not a robust as WebPack.
+                        </p>
                     </section>
             </div>
+            <div class="row">
+                <div class="col col-1-3">
+                    <h2>Development Servers & other packages</h2>
+                </div>
+                <section class="col col-2-3">
+                    <p>From the npm website, you can search or browse for packages or modules.
+                        The terms package and module are used interchangable just to confuse you. 
+                        They are exactly the same thing: a directory of files (or sub-directories) containing classes, objects and/or functions.
+                         Everything on npm is a module. Gulp and grunt are modules; jQuery is a module; even npm is a module.
+                        So far, most of the modules mentioned above are aggregate modules that combine tasks and even incorporate 
+                       other modules to make tasks easier. You can get Gulp to run WebPack, for example.
+
+                       There are other modules that specialize in one task. You can use these by themselves or incorpate them into task runner.</p> 
+                       <p><a href="https://www.npmjs.com/package/live-server">Live-server</a> runs a development server for you that you may need to incorporate server-side code, make Ajax request, or get your cookies to work.</p>
+                       <p><a href="https://www.npmjs.com/package/browser-sync">Browser-sync</a> began as a tool to test webpages across browswers, but has a wide array of other browser-related 
+                           tasks like automatic reloading.
+                       </p>
+                       <p>Since modules are really just JavaScript files, a npm accessible module can include just about anything written in JS from
+                          <a href="https://www.npmjs.com/package/babel-core">Babel</a> (the popular ES6+ transpiler) and JS frameworks 
+                          (<a href="https://www.npmjs.com/package/react">React</a> and <a href="https://www.npmjs.com/package/angular">AngularJS</a> ) </p>
+                </section>
+            </div>
+
             <div class="row">
                     <section class="col col-3-3 js-top">top</section>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="_js/main.js"></script>
+    <script src="../_js/main.js"></script>
     
 </body>
 </html>
