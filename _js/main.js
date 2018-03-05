@@ -16,18 +16,24 @@ $(document).ready(function(){
       $(".mobile-menu_open").show();
     })
 
-    $(".container").on("click", function(){
-      $(".top-nav ul").slideUp();
-      $(".mobile-menu_close").hide();
-      $(".mobile-menu_open").show();
-    })
 
-    $(window).scroll(function(){
-      $(".top-nav ul").slideUp();
-      $(".mobile-menu_close").hide();
-      $(".mobile-menu_open").show();
-    })
+    //this code slides up the menu when user 
+    //scrolls or clicks on container, but only on mobile devices
+    if(innerWidth<=600){
+      $(".container").on("click", function(){
+        
+          $(".top-nav ul").slideUp();
+          $(".mobile-menu_close").hide();
+          $(".mobile-menu_open").show();
+        
+      })
 
+      $(window).scroll(function(){
+        $(".top-nav ul").slideUp();
+        $(".mobile-menu_close").hide();
+        $(".mobile-menu_open").show();
+      })
+    }
   //scroll to top 
 
     $(".js-top").on("click", function(e){

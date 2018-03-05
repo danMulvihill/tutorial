@@ -29,6 +29,7 @@ h3{
 .mobile-menu{
     padding-right: 25px;
     cursor: pointer;
+    font-size: 1.5em;
     text-align:right;
     /* display:inline-block; */
     /* float:right; */
@@ -48,7 +49,7 @@ h3{
     font-weight: bold;
 }
 
-.top-nav{
+.top-nav, .low-nav{
     width: 100%;
     position: fixed;
     top:0; left: 0;
@@ -60,40 +61,54 @@ h3{
     display:none;
 } */
 
+/* .top-nav p a{
+    color: white;
+    float: right;
+    padding-right: 15px;
+} */
+
 .index .top-nav ul{
     display:none;
 }
 
-.top-nav ul{
-   
+.top-nav ul, .low-nav ul { 
     margin: 0 auto;
     padding: 0;
     width:100%;
-    clear: right;
-    /* display: flex; */
-    /* justify-content: space-between; */
-      
+    clear: right;   
 }
-.top-nav li{
+
+.low-nav ul{
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.top-nav li, .low-nav li{
     font-weight:bold;
+    font-size: 1.5em;
     list-style-type: none;
     display: block;
     padding: 5px 25px;
     text-align: right;
 }
 
-.top-nav li a{
+.top-nav li a, .low-nav li a{
     color: white;
     transition: all 0.9s;
 }
-.top-nav li a:hover{
+.top-nav li a:hover, .low-nav li a:hover{
     color: cyan;
+}
+
+.mobile-menu_close{
+    display:none;
 }
 
 /* top */
 
 .container{
-    margin: 35px auto 0;
+    margin: 45px auto 0;
+    clear:right;
 }
 
 header{
@@ -165,11 +180,14 @@ section{
    
 }
 
-.js-top{
+.footer .col{
     text-align: center;
+    font-weight: bolder;
+    font-size: 1.5em;
     margin: 0 auto;
     cursor: pointer;
 }
+
 
 .wide{
     /* display:none; */
@@ -180,7 +198,9 @@ section{
         background: #334;
         padding: 8px;
         border-radius: 1%;
-        max-width: 900px;
+        max-width: 1000px;
+        margin: 35px auto 0;
+        clear: right;
     }
     header{
         padding: 0 15px;
@@ -194,15 +214,14 @@ section{
         /* display:inline; */
     }
    
-    
-
     /* This is for full display of nav */
 
     .index .top-nav ul{
         display:flex;
+        
     }
     
-    .top-nav ul{
+    .top-nav ul, .low-nav ul{
     
         margin: 0 auto;
         padding: 0;
@@ -211,8 +230,9 @@ section{
         justify-content: space-between;
           
     }
-    .top-nav li{
+    .top-nav li, .low-nav li{
         font-weight:bold;
+        font-size: 1em;
         list-style-type: none;
         display: inline-block;
         padding: 5px 2%;
