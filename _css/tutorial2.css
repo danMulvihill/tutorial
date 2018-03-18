@@ -67,7 +67,7 @@ h3{
     padding-right: 15px;
 } */
 
-.index .top-nav ul{
+/* .index */ .top-nav ul{ 
     display:none;
 }
 
@@ -77,11 +77,13 @@ h3{
     width:100%;
     clear: right;   
 }
+/* the index and low-nav class styles was a for design experiment; 
+not sure if I gonna keep it.  */
 
-.low-nav ul{
+/* .low-nav ul{
     display: flex; 
     justify-content: space-between; 
-}
+} */
 
 .top-nav li, .low-nav li{
     font-weight:bold;
@@ -90,6 +92,7 @@ h3{
     display: block;
     padding: 5px 25px;
     text-align: right;
+    color: cyan;
 }
 
 .top-nav li a, .low-nav li a{
@@ -97,6 +100,9 @@ h3{
     transition: all 0.9s;
 }
 .top-nav li a:hover, .low-nav li a:hover{
+    color: cyan;
+}
+.current li a{
     color: cyan;
 }
 
